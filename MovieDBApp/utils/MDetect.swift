@@ -1,0 +1,23 @@
+//
+//  MDetect.swift
+//  MovieDBApp
+//
+//  Created by Htet Arkar Zaw on 24/10/2019.
+//  Copyright © 2019 Htet Arkar Zaw. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+public struct MDetect {
+    
+    public static func isUnicode() -> Bool {
+        let label1 = UILabel()
+        let label2 = UILabel()
+        label1.text = "က"
+        label2.text = "က္က"
+        label1.sizeToFit()
+        label2.sizeToFit()
+        return label2.frame.width == label1.frame.width
+    }
+}

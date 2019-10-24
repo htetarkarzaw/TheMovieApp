@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="175" id="KGk-i7-Jjw" customClass="OuterTableViewCell" customModule="MovieDBApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="389" height="260"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmg-O5-Ibd">
+                        <rect key="frame" x="0.0" y="0.0" width="389" height="260"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Showing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hL1-o4-Pca">
+                                <rect key="frame" x="12" y="12" width="365" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AKy-f9-gY7">
+                                <rect key="frame" x="0.0" y="45" width="389" height="203"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UZI-IR-lfO">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hL1-o4-Pca" secondAttribute="trailing" constant="12" id="0Ub-jY-ZWa"/>
+                            <constraint firstItem="AKy-f9-gY7" firstAttribute="leading" secondItem="Wmg-O5-Ibd" secondAttribute="leading" id="3YN-N7-o9y"/>
+                            <constraint firstItem="hL1-o4-Pca" firstAttribute="top" secondItem="Wmg-O5-Ibd" secondAttribute="top" constant="12" id="40h-p5-WHx"/>
+                            <constraint firstItem="AKy-f9-gY7" firstAttribute="top" secondItem="hL1-o4-Pca" secondAttribute="bottom" constant="12" id="4TU-hu-12k"/>
+                            <constraint firstItem="hL1-o4-Pca" firstAttribute="leading" secondItem="Wmg-O5-Ibd" secondAttribute="leading" constant="12" id="Ly3-Lw-Ahp"/>
+                            <constraint firstAttribute="trailing" secondItem="AKy-f9-gY7" secondAttribute="trailing" id="Tpe-Ff-xwr"/>
+                            <constraint firstAttribute="bottom" secondItem="AKy-f9-gY7" secondAttribute="bottom" constant="12" id="YwE-g7-yvZ"/>
+                            <constraint firstAttribute="bottom" secondItem="AKy-f9-gY7" secondAttribute="bottom" constant="12" id="hHO-4H-mo8"/>
+                            <constraint firstAttribute="trailing" secondItem="AKy-f9-gY7" secondAttribute="trailing" id="wOv-Ma-1lk"/>
+                            <constraint firstItem="AKy-f9-gY7" firstAttribute="leading" secondItem="Wmg-O5-Ibd" secondAttribute="leading" id="xNQ-vm-6uF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wmg-O5-Ibd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PWW-lJ-Xn0"/>
+                    <constraint firstItem="Wmg-O5-Ibd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="c2x-2e-M3o"/>
+                    <constraint firstAttribute="bottom" secondItem="Wmg-O5-Ibd" secondAttribute="bottom" id="rKw-Lw-kpM"/>
+                    <constraint firstAttribute="trailing" secondItem="Wmg-O5-Ibd" secondAttribute="trailing" id="vyN-DI-ccB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="innerCollectionView" destination="AKy-f9-gY7" id="M7S-CC-a7Z"/>
+                <outlet property="lblMovie" destination="hL1-o4-Pca" id="7cy-Mn-q0V"/>
+            </connections>
+            <point key="canvasLocation" x="177.536231884058" y="196.20535714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
